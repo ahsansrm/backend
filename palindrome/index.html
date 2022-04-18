@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="./index.js" async=""></script>
+<script>
+	function getPalindrome(){
+		str = document.getElementById('txt').value;
+		console.log(str);
+		document.getElementById('palindromeScore').innerHTML = getPalindromeScore(str);
+	}
+</script>
+</head>
+<body>
+<div style=" text-align: center;">
+<h2>The Palindrome Score</h2>
+<p><strong>Enter text here :</strong> <input type="text" id="txt" value="abcdefAnnaRacecarMom" /> <button onclick="getPalindrome();" > Click Me </button></p>
+<p><strong>Palindrome score :</strong> <span id="palindromeScore"> </span></p>
+ <br> <br>
+<p>
+Q. How would the program need to change if it needs to analyze a sentence instead of a word and produce a similar result? e.g 'King, are you glad you are king'? <br> <br>
+
+A. We need to update two function in file index.js. <br>
+ 1. getPalindromeScore - Remove line no 4 and remove special character from string using str.replace(/[^a-zA-Z ]/g, "").
+ 2. validatePalindrome - Use split function on space in existing program on line no 14 - { const arrValues = string.split(' '); }, And on line no we need to add word count.
+</p>
+</div>
+</body>
+</html>
+

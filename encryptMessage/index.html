@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="./index.js" async=""></script>
+<script>
+	function getEncrypt(){
+		str = document.getElementById('txt').value;
+		console.log(str);
+		document.getElementById('encrypTxt').innerHTML = getEncryptString(str);
+	}
+</script>
+</head>
+<body>
+<div style=" text-align: center;">
+<h2>The Encrypt Message</h2>
+<p><strong>Enter text here :</strong> <input type="text" id="txt" /> <button onclick="getEncrypt();" > Click Me </button></p>
+<p><strong>Encrypt text :</strong> <br><br> <span id="encrypTxt"> </span></p>
+</div>
+</body>
+</html>
+
