@@ -27,11 +27,3 @@ function validatePalindrome(string, index, arr) {
     }
 
 }
-/*
-*
-*Q. How would the program need to change if it needs to analyze a sentence instead of a word and produce a similar result? e.g 'King, are you glad you are king'?
-*
-*A. We need to update two function.
- 1. getPalindromeScore - Remove line no 4 and remove special character from string using str.replace(/[^a-zA-Z ]/g, "").
- 2. validatePalindrome - Use split function on space in existing program on line no 14 - { const arrValues = string.split(' '); }, And on line no we need to add word count.
-*/

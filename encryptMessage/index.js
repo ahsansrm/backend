@@ -12,25 +12,25 @@ function getEncryptString(str) {
     let column = Math.ceil(sqrRoot);
 	
 	// Add string in the array
-	let s = new Array();
-	let k = 0;
+	let arrString = new Array();
+	let count = 0;
 	for (let i = 0; i < row; i++)
 	{
-		s[i] = new Array(column);
+		arrString[i] = new Array(column);
 		for (let j = 0; j < column; j++)
 		{
-			 if(k < string.length){
-				s[i][j] = string[k];
+			 if(count < string.length){
+				arrString[i][j] = string[count];
 			 }else{
-				s[i][j] = ''; 
+				arrString[i][j] = ''; 
 			 }
-			k++;
+			count++;
 		}
 		
 	}
 	
 	// Reverse the array
-	reverseArray = reverseArr(s);
+	reverseArray = reverseArr(arrString);
 	
 	// Combine the charecter
 	reverseArray.forEach(combineWord);
@@ -40,11 +40,11 @@ function getEncryptString(str) {
 	
 }
 
-function reverseArr(a) {
+function reverseArray(arrString) {
 	
 	// Convert row to column and column to row
-    return Object.keys(a[0]).map(function(c) {
-        return a.map(function(r) { return r[c]; });
+    return Object.keys(arrString[0]).map(function(c) {
+        return arrString.map(function(r) { return r[c]; });
     });
 }
 
